@@ -22,8 +22,30 @@
   let menu=window.document.getElementById('menu');
   console.dir(menu);//구조를 먼저 보는 것이 훨씬 중요
   // 내가 한 게 맞는지 확인
-  console.log(menu.children);
+  console.log(menu.children); //배열
   console.log(menu.children[0]);
+  //검증 완료
+  console.dir(menu.children[0].style);
+  // menu.children[0].style.color="blue";
+
+  //참 거짓 구문  
+/*   for(let index=0;index<menu.children.length;index++){
+    if(menu.children[index].textContent==="item-2"){
+      //참일때
+      menu.children[index].style.color="red";
+    } else{ //거짓일때
+      menu.children[index].style.color="gray";
+    }
+  } */
+  //간단 index===1로 하면 같음(위에있는 값과 같게 나온다)
+  for(let index=0;index<menu.children.length;index++){
+    if(index === 2){
+      menu.children[index].style.color="red";
+    } else{ 
+      menu.children[index].style.color="gray";
+    }
+  }
+  
 
 </script>
 </body>
