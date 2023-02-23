@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="menu">
+  <li>item-1</li>
+  <li>item-2</li>
+  <li>item-3</li>
+  <li>item-4</li>
+  <li>item-5</li>
+</ul>
+<ul></ul>
+<ul></ul>
+<ul></ul>
+<script>
+  //nextElementSibling을 이용해서 만들기
+let menu=document.getElementById('menu');
+console.log(menu.children[0].nextElementSibling);
+console.log(menu.children[3].nextElementSibling);
+console.dir(menu.children[0].nextElementSibling);
+
+//성공
+for(let i=0;i<menu.children.length;i++){
+  if(i===1){
+    menu.children[0].nextElementSibling.style.color="green";
+  }
+}
+
+
+  // window안에 document가 있으며, window.document와 document는 같다. ''는 문자열 구분하기 위해서 쓰는 것
+/*   let menu=document.getElementById('menu');
+  console.dir(menu);
+  console.log(menu.children);
+  console.log(menu.children[1]);
+  console.dir(menu.children[1]);
+  console.dir(menu.children[1].style); */
+  //검증 완료
+  //menu.children[1].style.color="green";
+
+/*   for(let i=0;i<menu.children.length;i++){
+    if(i===2){
+      menu.children[1].style.color="green";
+    }else{
+      menu.children[i].style.color="gray";
+    }
+  }
+ */
+//연습 끝
+
+
+
+
+
+</script>
+</body>
+
+</html>
